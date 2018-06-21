@@ -9,7 +9,13 @@ public class Television {
     public Television() {
         this.volume = 0;
         this.currentProgram = 1;
-        this.turnOn = true;
+        this.turnOn = false;
+    }
+
+    public Television(int volume, int currentProgram, boolean turnOn) {
+        this.volume = volume;
+        this.currentProgram = currentProgram;
+        this.turnOn = turnOn;
     }
 
     public int getVolume() {
@@ -36,4 +42,10 @@ public class Television {
         this.turnOn = turnOn;
     }
 
+    public void info() {
+        System.out.println("Trenutni volume je: " + getVolume());
+        System.out.println("Trenutni kanal je: " + getCurrentProgram());
+        System.out.println("Televizor je upaljen: " + getTurnOn());
+        System.out.println("");
+    }
 }
